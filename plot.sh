@@ -1,7 +1,3 @@
-filename="fb_plot"
-plotscript="plot.plt"
-list='"facebook" "accuweather" "nytimes" "npr.news"'
-for app in $list;
-do
-	gnuplot -e "filename=$app; outputname='$app.eps'" $plotscript
-done
+fileName="throughput_tcp"
+gnuplot -e "tmpName='{$fileName}.eps'" $plotScript
+#inkscape --export-pdf=${fileName}.pdf --export-area-drawing {$fileName}.eps
